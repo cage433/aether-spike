@@ -1,6 +1,4 @@
 org.scalatest scalatest_{scala_version_base} {scalatest_version}
-
-
 org.eclipse.aether aether-api  1.0.0.v20140518 
 org.eclipse.aether aether-spi  1.0.0.v20140518 
 org.eclipse.aether aether-util  1.0.0.v20140518 

@@ -10,7 +10,8 @@
 # resolver:
 # 'default' is used for all resources that don't specify a particular resolver
 #----------------------------------------------------------------------------
-resolver: default http://repo1.maven.org/maven2/
+resolver: default http://oss.sonatype.org/content/repositories/releases/
+resolver: maven http://repo1.maven.org/maven2/
 
 #----------------------------------------------------------------------------
 # version:
