@@ -34,7 +34,8 @@ object Booter
     {
         val session = MavenRepositorySystemUtils.newSession()
 
-        val localRepo = new LocalRepository( "target/local-repo" )
+        //val localRepo = new LocalRepository( "target/local-repo" )
+        val localRepo = new LocalRepository( "/home/alex/tmp/resource-cache/" )
         session.setLocalRepositoryManager( system.newLocalRepositoryManager( session, localRepo ) )
 
         session.setTransferListener( new ConsoleTransferListener() )
@@ -46,17 +47,18 @@ object Booter
         session
     }
 
-    def newRepositories( system : RepositorySystem , session : RepositorySystemSession ) : java.util.List[RemoteRepository] = 
-    {
-      val l = new LinkedList[RemoteRepository]()
-      val repo = newCentralRepository()
-      val bldr = new RemoteRepository.Builder(repo)
-      bldr.setProxy(new Proxy(Proxy.TYPE_HTTP, "localhost", 4128))
-      val repo2 = bldr.build()
-      l.add(repo2)
-      l
-//      List(newCentralRepository())
-    }
+    //def newRepositories( system : RepositorySystem , session : RepositorySystemSession ) : java.util.List[RemoteRepository] = 
+    //{
+      //val l = new LinkedList[RemoteRepository]()
+      //val repo = newCentralRepository()
+      //val bldr = new RemoteRepository.Builder(repo)
+      //println("Not setting proxy")
+      //bldr.setProxy(new Proxy(Proxy.TYPE_HTTP, "localhost", 4128))
+      //val repo2 = bldr.build()
+      //l.add(repo2)
+      //l
+////      List(newCentralRepository())
+    //}
 
     def newCentralRepository() = {
         new RemoteRepository.Builder( "central", "default", "http://central.maven.org/maven2/" ).build()

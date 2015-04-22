@@ -58,7 +58,7 @@ class ConsoleRepositoryListener()
 
     override def artifactResolved( event : RepositoryEvent)
     {
-        out.println( "Resolved artifact " + event.getArtifact() + " from " + event.getRepository() )
+        //out.println( "Resolved artifact " + event.getArtifact() + " from " + event.getRepository() )
     }
 
     override def artifactDownloading( event : RepositoryEvent)
@@ -73,7 +73,7 @@ class ConsoleRepositoryListener()
 
     override def artifactResolving( event : RepositoryEvent)
     {
-        out.println( "Resolving artifact " + event.getArtifact() )
+        //out.println( "Resolving artifact " + event.getArtifact() )
     }
 
     override def metadataDeployed( event : RepositoryEvent)

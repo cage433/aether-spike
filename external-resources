@@ -24,3 +24,5 @@ org.codehaus.plexus plexus-classworlds  2.4
 org.sonatype.sisu sisu-guice  3.1.6 
 javax.inject javax.inject  1 
 com.google.guava guava  11.0.2 
+ch.qos.logback logback-classic 1.0.6
+ch.qos.logback logback-core 1.0.6
